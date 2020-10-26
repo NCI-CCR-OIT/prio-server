@@ -16,6 +16,7 @@ type DNSConfig struct {
 	Provider         string
 	CloudflareConfig *CloudflareConfig `toml:"cloudflare"`
 	GCPConfig        *GCPConfig        `toml:"gcp"`
+	Route53Config    *Route53Config    `toml:"route53"`
 }
 
 // GCPConfig is the GCP configuration structure
@@ -30,6 +31,11 @@ type GCPConfig struct {
 // CloudflareConfig is the Cloudflare based DNS configuration - used only if Provider is set to cloudflare
 type CloudflareConfig struct {
 	APIKey string `toml:"api_key"`
+}
+
+// Route53Config is the Route53 based DNS configuration - used only if Provider is set to route53
+type Route53Config struct {
+	MaxRetries int `toml:"max-retries"`
 }
 
 // ACMEConfig is the ACME configuration structure

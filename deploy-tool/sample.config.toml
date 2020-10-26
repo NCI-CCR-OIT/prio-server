@@ -1,6 +1,6 @@
 # DNS provider settings
 [dns]
-provider = "cloudflare" # options: cloudflare,
+provider = "cloudflare" # options: cloudflare, gcp, route53
 
 [dns.cloudflare]
 api_key = "API_KEY"
@@ -10,6 +10,9 @@ project = "project"
 
 [dns.gcp.zone_mapping]
 "certmagic_zone" = "gcp_zone"
+
+[dns.route53]
+"max-retries" = 5
 
 # ACME settings
 [acme]

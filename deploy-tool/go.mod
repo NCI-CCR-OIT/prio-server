@@ -5,6 +5,7 @@ go 1.15
 require (
 	github.com/caddyserver/certmagic v0.12.0
 	github.com/libdns/cloudflare v0.0.0-20200528144945-97886e7873b1
+	github.com/libdns/route53 v1.0.1
 	github.com/libdns/libdns v0.1.0
 	github.com/pelletier/go-toml v1.8.1
 	golang.org/x/oauth2 v0.0.0-20191202225959-858c2ad4c8b6
